@@ -6,7 +6,7 @@ class Figura {
 public:
     virtual double ploshcha() = 0;
     virtual double perymetr() = 0;
-    virtual ~Figura() {} // Віртуальний деструктор
+    virtual ~Figura() {} 
 };
 
 class Pryamokutnyk : public Figura {
@@ -73,7 +73,7 @@ public:
 int main() {
     Figura* figury[3];
 
-    cout << "Vvedit' dany dlya pryamokutnyka:\n";
+    cout << "dany dlya pryamokutnyka:\n";
     double d, s;
     cout << "Dovzhyna: ";
     cin >> d;
@@ -81,7 +81,7 @@ int main() {
     cin >> s;
     figury[0] = new Pryamokutnyk(d, s);
 
-    cout << "\nVvedit' dany dlya trykutnyka:\n";
+    cout << "\n dany dlya trykutnyka:\n";
     double a, b, c;
     cout << "Storona 1: ";
     cin >> a;
@@ -91,13 +91,13 @@ int main() {
     cin >> c;
     figury[1] = new Trykutnyk(a, b, c);
 
-    cout << "\nVvedit' radius kola:\n";
+    cout << "\n radius kola:\n";
     double r;
     cout << "Radius: ";
     cin >> r;
     figury[2] = new Kolo(r);
 
-    cout << "\n--- Rezul'taty obchyslen' ---\n";
+    cout << "\n--- Rezultaty obchyslen ---\n";
     for (int i = 0; i < 3; i++) {
         cout << "Figura #" << (i + 1) << ":\n";
         cout << "Ploshcha: " << figury[i]->ploshcha() << endl;

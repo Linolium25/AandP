@@ -8,7 +8,6 @@
 
 using namespace std;
 
-// === ѕункт а) Ч "dubliuvaty slova z 2+ holosnymy"
 bool hasMoreThanTwoVowels(const string& slovo) {
     string vowels = "аеЇи≥њоую€ј≈™»≤ѓќ”ёя";
     int count = 0;
@@ -24,15 +23,14 @@ void duplicateWords(const string& fileName, stringstream& result) {
     ifstream in(fileName.c_str());
     string word;
     while (in >> word) {
-        result << word << " "; // "zvychayne slovo"
+        result << word << " "; 
         if (hasMoreThanTwoVowels(word)) {
-            result << word << " "; // "dubliuvano slovo z 2+ holosnymy"
+            result << word << " "; 
         }
     }
     in.close();
 }
 
-// === ѕункт б) Ч "3 naidovshi slova"
 
 bool compareLength(const pair<string, int>& a, const pair<string, int>& b) {
     return a.first.length() > b.first.length();
@@ -62,7 +60,7 @@ void topThreeLongestWords(const string& fileName, stringstream& result) {
     in.close();
 }
 
-// === ѕункт в) Ч "rechenniia z zadanym slovom"
+// === ѕункт в) 
 
 void sentencesWithWord(const string& fileName, const string& searchWord) {
     ifstream in(fileName.c_str());
@@ -84,7 +82,7 @@ void sentencesWithWord(const string& fileName, const string& searchWord) {
     in.close();
 }
 
-// === ѕункт г) Ч "zberezhennia rezultat u z2.txt"
+// = ѕункт г) Ч
 
 void saveToFile(const stringstream& result) {
     string path;
@@ -97,7 +95,7 @@ void saveToFile(const stringstream& result) {
     cout << "Rezultat zberezheno u file: \"" << path << "\"\n";
 }
 
-// === ѕункт д) Ч "obroblennia slova, yake zustrichaiet'sia bilshe 1 razu"
+// === ѕункт д) 
 
 class MyString {
 public:
@@ -138,7 +136,7 @@ void searchWordLogic(const string& fileName, const string& slovo) {
     cout << "Rezultat zberezheno u z3.txt\n";
 }
 
-// === ѕункт е) Ч "formuvannia s1 s2 ta sortuvannia v alfavitnomu poriadku"
+// === ѕункт е) 
 
 void wordSorting(const string& mainFile, const string& tFile) {
     ifstream inMain(mainFile.c_str());
@@ -168,7 +166,7 @@ void wordSorting(const string& mainFile, const string& tFile) {
     cout << "Rezultat zberezheno u z4.txt\n";
 }
 
-// === ћ≈Ќё Ч пункт Ї)
+// пункт Ї)
 int main() {
     string fileName = "z1.txt";
     stringstream result;
