@@ -1,8 +1,0 @@
-Matrusha:
-3	-7	-2	
--1	5	-1	
-4	3	-3	
-Serednje arifmetychne: 0.111111
-Ryadok 1: 2
-Ryadok 2: 2
-Ryadok 3: 1
